@@ -59,7 +59,7 @@ const theme = extendTheme({
       marginBottom: 0, // removed bottom margin
     },
     body1: {
-      fontSize: '1.5rem',
+      fontSize: '1rem',
     },
   },
   components: {

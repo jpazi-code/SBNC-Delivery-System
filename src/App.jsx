@@ -42,10 +42,10 @@ function App() {
     >
       <Box
         sx={{
-          height: 800,
+          height: 500,
           width: 800,
           display: 'flex',
-          p: 10,
+          p: 5,
           boxShadow: 3,
           justifyContent: 'center',
           bgcolor: 'background.default',
@@ -101,7 +101,7 @@ function App() {
                 <Stack direction='row' sx={{
                   justifyContent:'space-around',
                   alignItems:'center',
-                  mt: '20%',
+                  mt: 1,
                 }}>
                   <Typography level='h2'>Logo</Typography>
                   <Typography level='h2'>Logo</Typography>
