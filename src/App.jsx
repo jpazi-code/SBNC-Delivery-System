@@ -43,14 +43,15 @@ function App() {
       <Box
         sx={{
           height: 500,
-          width: 800,
+          width: 600,
           display: 'flex',
           p: 5,
           boxShadow: 3,
           justifyContent: 'center',
           bgcolor: 'background.default',
           color: 'primary.main',
-          borderRadius: 5,
+          borderRadius: 10,
+          boxShadow: '0px 8px 20px rgba(0, 0, 0, 0.15)',
         }}
       >
         <Stack sx={{ gap: 4, mb: 2, width: '100%' }}>
@@ -62,9 +63,9 @@ function App() {
               Delivery Application
             </Typography>
           </Box>
-          <Stack sx={{ gap: 4, my:'auto', width: '75%', mx:'auto'}}>
+          <Stack sx={{ gap: 4, my:'auto', width: '55%', mx:'auto'}}>
             <form onSubmit={handleSubmit}>
-              <FormControl required>
+              <FormControl required size='sm'>
                 <FormLabel>Username</FormLabel>
                 <Input
                   type="text"
@@ -73,7 +74,7 @@ function App() {
                   onChange={(e) => setUsername(e.target.value)}
                 />
               </FormControl>
-              <FormControl required sx={{ mt: 2 }}>
+              <FormControl required size='sm' sx={{ mt: 2,}}>
                 <FormLabel>Password</FormLabel>
                 <Input
                   type="password"
@@ -91,7 +92,7 @@ function App() {
                   }}
                 >
                   <Checkbox size="sm" label="Remember me" name="persistent" />
-                  <Link level="title-sm" href="#replace-with-a-link">
+                  <Link level="body-xs" href="#replace-with-a-link">
                     Forgot your password?
                   </Link>
                 </Box>
