@@ -46,7 +46,6 @@ function App() {
           width: 600,
           display: 'flex',
           p: 5,
-          boxShadow: 3,
           justifyContent: 'center',
           bgcolor: 'background.default',
           color: 'primary.main',
