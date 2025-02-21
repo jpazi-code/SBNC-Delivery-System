@@ -7,15 +7,45 @@ import {
   Table,
   Sheet,
 } from '@mui/joy';
+import { useNavigate } from 'react-router-dom';
 
 export default function WarehouseApprovedDeliveries() {
 //     return (
 //         <p>Warehouse</p>
 //     )
 // }
-  const rows = [
-    { driver: 'Charlie Green', plate: 'WRH123', ref: 'DEL-100', po: 'PO-3001', date: '03/01/2025' },
-    { driver: 'Diane Blue', plate: 'WRH789', ref: 'DEL-101', po: 'PO-3002', date: '03/02/2025' },
+const navigate = useNavigate()
+const rows = [
+    {
+      branch: 'Proxy',
+      orderRefNo: 'ORD0001',
+      deliveryRefNo: 'DEL000001',
+      status: 'Preparing',
+    },
+    {
+      branch: 'Proxy',
+      orderRefNo: 'ORD0002',
+      deliveryRefNo: 'DEL000002',
+      status: 'Dispatched',
+    },
+    {
+      branch: 'Proxy',
+      orderRefNo: 'ORD0002',
+      deliveryRefNo: 'DEL000002',
+      status: 'Dispatched',
+    },
+    {
+      branch: 'Proxy',
+      orderRefNo: 'ORD0002',
+      deliveryRefNo: 'DEL000002',
+      status: 'Dispatched',
+    },
+    {
+      branch: 'Proxy',
+      orderRefNo: 'ORD0002',
+      deliveryRefNo: 'DEL000002',
+      status: 'Dispatched',
+    },
   ];
 
   return (
@@ -27,7 +57,7 @@ export default function WarehouseApprovedDeliveries() {
           width: 800,
           mx: 'auto',
           p: 3,
-          borderRadius: 4,
+          borderRadius: 10,
           boxShadow: '0px 8px 20px rgba(0, 0, 0, 0.15)',
         }}
       >
@@ -38,28 +68,26 @@ export default function WarehouseApprovedDeliveries() {
 
         {/* Table */}
         <Sheet variant="outlined" sx={{ overflow: 'auto' }}>
-          <Table aria-label="Warehouse Approved Deliveries" stickyHeader>
-            {/* <TableHead>
-              <TableRow>
-                <TableCell>Driver</TableCell>
-                <TableCell>Plate No.</TableCell>
-                <TableCell>Delivery Ref.</TableCell>
-                <TableCell>PO No.</TableCell>
-                <TableCell>Date</TableCell>
-              </TableRow>
-            </TableHead>
-            <TableBody>
-              {rows.map((row, index) => (
-                <TableRow key={index}>
-                  <TableCell>{row.driver}</TableCell>
-                  <TableCell>{row.plate}</TableCell>
-                  <TableCell>{row.ref}</TableCell>
-                  <TableCell>{row.po}</TableCell>
-                  <TableCell>{row.date}</TableCell>
-                </TableRow>
-              ))}
-            </TableBody> */}
-          </Table>
+            <Table aria-label="Warehouse Approved Deliveries" stickyHeader>
+                <thead>
+                    <tr>
+                        <th>Branch</th>
+                        <th>Order Reference No.</th>
+                        <th>Delivery Reference No.</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                {rows.map((item, index) => (
+                    <tr key={index}>
+                        <th>{item.branch}</th>
+                        <th>{item.orderRefNo}</th>
+                        <th>{item.deliveryRefNo}</th>
+                        <th>{item.status}</th>
+                    </tr>
+                ))}
+                </tbody>
+            </Table>
         </Sheet>
 
         {/* Bottom Bar (Logos + Back Button) */}
@@ -69,14 +97,15 @@ export default function WarehouseApprovedDeliveries() {
           alignItems="center"
           sx={{ mt: 3 }}
         >
-          {/* Logos (replace with actual images or brand icons) */}
-          <Stack direction="row" spacing={2}>
-            <Box sx={{ width: 40, height: 40, bgcolor: 'neutral.outlinedBorder' }} />
-            <Box sx={{ width: 40, height: 40, bgcolor: 'neutral.outlinedBorder' }} />
-            <Box sx={{ width: 40, height: 40, bgcolor: 'neutral.outlinedBorder' }} />
-          </Stack>
+            {/* Logos (replace with actual images or brand icons) */}
+            <Stack direction="row" spacing={2}>
+                <Box sx={{ width: 40, height: 40, bgcolor: 'neutral.outlinedBorder' }} />
+                <Box sx={{ width: 40, height: 40, bgcolor: 'neutral.outlinedBorder' }} />
+                <Box sx={{ width: 40, height: 40, bgcolor: 'neutral.outlinedBorder' }} />
+                <Box sx={{ width: 40, height: 40, bgcolor: 'neutral.outlinedBorder' }} />
+            </Stack>
 
-          <Button variant="solid" color="warehouse">
+          <Button variant="solid" color="warehouse" onClick={() => navigate(-1)}>
             Back
           </Button>
         </Stack>

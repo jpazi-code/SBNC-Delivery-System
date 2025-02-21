@@ -104,10 +104,11 @@ function App() {
                   alignItems:'center',
                   mt: 1,
                 }}>
-                  <Typography level='h2'>Logo</Typography>
-                  <Typography level='h2'>Logo</Typography>
-                  <Typography level='h2'>Logo</Typography>
-                  <Typography level='h2'>Logo</Typography>
+                  {/* Logos (replace with actual images or brand icons) */}
+                  <Box sx={{ width: 40, height: 40, bgcolor: 'neutral.outlinedBorder' }} />
+                  <Box sx={{ width: 40, height: 40, bgcolor: 'neutral.outlinedBorder' }} />
+                  <Box sx={{ width: 40, height: 40, bgcolor: 'neutral.outlinedBorder' }} />
+                  <Box sx={{ width: 40, height: 40, bgcolor: 'neutral.outlinedBorder' }} />
                 </Stack>
               </Stack>
             </form>

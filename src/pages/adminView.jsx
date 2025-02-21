@@ -51,12 +51,13 @@ export default function AdminView() {
             </Button>
           </Stack>
           <Box sx={{ display: 'flex', justifyContent: 'flex-end' }}>
-            <Button variant="solid" color="admin">
+            <Button variant="solid" color="admin" onClick={() => navigate(-1)}>
               Log off
             </Button>
           </Box>
         </Stack>
       </Box>
+      
     </Box>
   );
 }

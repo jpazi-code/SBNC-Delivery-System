@@ -52,7 +52,7 @@ export default function WarehouseView() {
             </Button>
           </Stack>
           <Box sx={{ display: 'flex', justifyContent: 'flex-end' }}>
-            <Button variant="solid" color="warehouse">
+            <Button variant="solid" color="warehouse" onClick={() => navigate(-1)}>
               Log off
             </Button>
           </Box>

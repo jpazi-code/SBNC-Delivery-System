@@ -56,7 +56,7 @@ export default function BranchView() {
             </Button>
           </Stack>
           <Box sx={{ display: 'flex', justifyContent: 'flex-end' }}>
-            <Button variant="solid" color="branch">
+            <Button variant="solid" color="branch" onClick={() => navigate(-1)}>
               Log off
             </Button>
           </Box>
